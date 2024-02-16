@@ -33,7 +33,7 @@
    <Line endX="259.0000305175781" layoutX="101.0" layoutY="49.0" startX="-100.0" />
 
 
-   <Button alignment="CENTER" layoutX="126.0" layoutY="475.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+   <Button alignment="CENTER" layoutX="126.0" layoutY="475.0" mnemonicParsing="false" onAction="#ButtonClick" style="-fx-background-color: transparent;">
       <graphic>
          <ImageView fitHeight="75.0" fitWidth="75.0">
             <Image url="@../../../ui_images/onboarding_ui/go_btn2.png" />
