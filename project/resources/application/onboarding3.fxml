@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.onboarding3">
+   <Label alignment="CENTER" layoutX="44.0" layoutY="340.0" prefHeight="46.0" prefWidth="270.0" style="-fx-font-family: 'Poppins', sans-serif; -fx-font-style: normal;" text="Book your E-Rickshaw " textAlignment="CENTER" textFill="#414141">
+      <font>
+         <Font size="25.0" />
+      </font>
+   </Label>
+   <ImageView fitHeight="216.0" fitWidth="360.0" layoutX="2.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../ui_images/onboarding_ui/image_3.png" />
+   </ImageView>
+   <ImageView fitHeight="86.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../ui_images/onboarding_ui/status_bar.png" />
+   </ImageView>
+   <Label fx:id="timeLabel" layoutX="8.0" prefHeight="46.0" prefWidth="68.0" style="-fx-font-weight: bold; -fx-alignment: center; -fx-background-color: white;" text="Time" />
+
+   <Label alignment="CENTER" layoutX="45.0" layoutY="387.0" prefHeight="62.0" prefWidth="254.0" style="-fx-font-family: 'Poppins', sans-serif; -fx-font-style: normal;" text="Eco-Friendly Rides, Effortless Journeys: Book Your e-Rickshaw Ride Today!" textAlignment="CENTER" textFill="#a0a0a0" wrapText="true">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+
+   <Button layoutX="287.0" layoutY="54.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="58.0" styleClass="skip" stylesheets="@../css/style.css" text="Skip" />
+   <Line endX="259.0000305175781" layoutX="101.0" layoutY="49.0" startX="-100.0" />
+
+
+   <Button alignment="CENTER" layoutX="126.0" layoutY="475.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+      <graphic>
+         <ImageView fitHeight="75.0" fitWidth="75.0">
+            <Image url="@../../../ui_images/onboarding_ui/go_btn3.png" />
+         </ImageView>
+      </graphic>
+   </Button>
+   <Button alignment="BOTTOM_CENTER" layoutX="89.0" layoutY="602.0" mnemonicParsing="false" onAction="#Home" style="-fx-background-color: transparent;">
+      <graphic>
+         <Rectangle accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" height="3.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      </graphic>
+   </Button>
+</AnchorPane>
