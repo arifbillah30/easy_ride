@@ -1,6 +1,5 @@
 package controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,7 +11,7 @@ import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
-public class onboarding3 {
+public class enable_location {
 
     @FXML
     private Label timeLabel;
@@ -29,10 +28,10 @@ public class onboarding3 {
         timeLabel.setText(formattedTime);
     }
 
-    public void Home(ActionEvent event) throws IOException {
+    public void ButtonAction() throws IOException {
 
         // Load the FXML file for the new scene
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/onboarding.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/welcome_screen.fxml"));
         Parent root = loader.load();
 
         // Create a new scene
@@ -44,4 +43,5 @@ public class onboarding3 {
         stage.show();
 
     }
+
 }

@@ -34,12 +34,12 @@
          <Rectangle accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" height="3.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
       </graphic>
    </Button>
-   <Button alignment="CENTER" layoutX="43.0" layoutY="455.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="269.0" style="-fx-background-color: F18800;" text="Create an account" textFill="WHITE">
+   <Button alignment="CENTER" layoutX="43.0" layoutY="455.0" mnemonicParsing="false" onAction="#ButtonCreate" prefHeight="46.0" prefWidth="269.0" style="-fx-background-color: F18800;" styleClass="button2" stylesheets="@../css/style.css" text="Create an account" textFill="WHITE">
       <font>
          <Font name="System Bold" size="15.0" />
       </font>
    </Button>
-   <Button alignment="CENTER" layoutX="43.0" layoutY="521.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="269.0" style="-fx-background-color: white; -fx-border-color: F18800;" text="Login" textFill="#f18800">
+   <Button alignment="CENTER" layoutX="43.0" layoutY="521.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="269.0" styleClass="button3" stylesheets="@../css/style.css" text="Login" textFill="#f18800">
       <font>
          <Font name="System Bold" size="15.0" />
       </font>

@@ -2,6 +2,7 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,7 +13,7 @@ import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
-public class onboarding3 {
+public class welcome_screen {
 
     @FXML
     private Label timeLabel;
@@ -29,10 +30,10 @@ public class onboarding3 {
         timeLabel.setText(formattedTime);
     }
 
-    public void Home(ActionEvent event) throws IOException {
+    public void ButtonCreate(ActionEvent event) throws IOException {
 
         // Load the FXML file for the new scene
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/onboarding.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/sign_up.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) timeLabel.getScene().getWindow();
@@ -40,15 +41,5 @@ public class onboarding3 {
         stage.show();
 
     }
-    public void Go(ActionEvent event) throws IOException {
 
-        // Load the FXML file for the new scene
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/enable_location.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-        Stage stage = (Stage) timeLabel.getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
-
-    }
 }

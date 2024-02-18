@@ -44,4 +44,16 @@ public class onboarding {
             stage.show();
 
     }
+
+    public void skip(ActionEvent event) throws IOException {
+
+        // Load the FXML file for the new scene
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/welcome_screen.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) timeLabel.getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+    }
 }

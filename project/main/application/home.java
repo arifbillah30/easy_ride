@@ -3,6 +3,7 @@ package application;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,6 +16,7 @@ public class home extends Application {
 
         Scene scene = new Scene(fxmlLoader.load(), 360, 640);
         stage.setTitle("Easy Ride - Book your E-Rickshaw ");
+       // stage.getIcons().add(new Image("favicon.png"));
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();

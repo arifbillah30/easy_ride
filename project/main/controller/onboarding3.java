@@ -34,11 +34,18 @@ public class onboarding3 {
         // Load the FXML file for the new scene
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/onboarding.fxml"));
         Parent root = loader.load();
-
-        // Create a new scene
         Scene scene = new Scene(root);
+        Stage stage = (Stage) timeLabel.getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
 
-        // Get the stage from the button's scene and set the new scene
+    }
+    public void Go(ActionEvent event) throws IOException {
+
+        // Load the FXML file for the new scene
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/enable_location.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
         Stage stage = (Stage) timeLabel.getScene().getWindow();
         stage.setScene(scene);
         stage.show();
