@@ -9,8 +9,8 @@ public class dbconnect {
     public static Connection conDB()
     {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/zero-idea", "root", "");
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/easy_ride", "root", "1234");
             System.out.println(con);
             return con;
 

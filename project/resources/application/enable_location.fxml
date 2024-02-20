@@ -31,7 +31,7 @@
          </ImageView>
       </top>
       <center>
-         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">.00.
+         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
 
             <Label alignment="CENTER" layoutX="4.0" layoutY="53.0" prefHeight="62.0" prefWidth="254.0"
                    style="-fx-font-family: 'Poppins', sans-serif; -fx-font-style: normal;"

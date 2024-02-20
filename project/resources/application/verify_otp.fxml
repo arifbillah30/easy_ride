@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.verify_otp">
+   <!-- Status bar -->
+   <ImageView fitHeight="86.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../../ui_images/onboarding_ui/status_bar.png" />
+   </ImageView>
+
+   <!-- Time label -->
+   <Label fx:id="timeLabel" layoutX="8.0" prefHeight="46.0" prefWidth="68.0" style="-fx-font-weight: bold; -fx-alignment: center; -fx-background-color: white;" text="Time" />
+
+   <!-- Horizontal separator line -->
+   <Line endX="259.0000305175781" layoutX="101.0" layoutY="49.0" startX="-100.0" />
+   <Button alignment="CENTER" layoutX="31.0" layoutY="326.0" mnemonicParsing="false" onAction="#sign_in" prefHeight="38.0" prefWidth="301.0" styleClass="btn" stylesheets="@../css/style.css" text="Verify" textFill="WHITE">
+         </Button>
+
+   <!-- Back button -->
+   <Button layoutX="24.0" layoutY="58.0" mnemonicParsing="false" style="-fx-background-color: transparent;" stylesheets="@../css/style.css" text="&lt; Back" />
+   <Label alignment="CENTER" layoutX="44.0" layoutY="144.0" prefHeight="46.0" prefWidth="270.0" style="-fx-font-family: 'Poppins', sans-serif; -fx-font-style: normal;" text="Email verification" textAlignment="CENTER" textFill="#414141">
+      <font>
+         <Font size="25.0" />
+      </font>
+   </Label>
+   <Label alignment="CENTER" layoutX="51.0" layoutY="184.0" prefHeight="38.0" prefWidth="254.0" style="-fx-font-family: 'Poppins', sans-serif; -fx-font-style: normal;" text="Enter your OTP code" textAlignment="CENTER" textFill="#a0a0a0" wrapText="true">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+
+   <HBox alignment="CENTER" layoutX="43.0" layoutY="248.0" prefHeight="38.0" prefWidth="278.0" spacing="10.0">
+      <TextField fx:id="otp1" alignment="CENTER" prefHeight="50.0" prefWidth="50.0" />
+      <TextField fx:id="otp2" alignment="CENTER" prefHeight="50.0" prefWidth="50.0" />
+      <TextField fx:id="otp3" alignment="CENTER" prefHeight="50.0" prefWidth="50.0" />
+      <TextField fx:id="otp4" alignment="CENTER" prefHeight="50.0" prefWidth="50.0" />
+      <TextField fx:id="otp5" alignment="CENTER" prefHeight="50.0" prefWidth="50.0" />
+   </HBox>
+
+   <HBox alignment="CENTER" layoutX="71.0" layoutY="400.0" prefHeight="27.0" prefWidth="219.0">
+      <children>
+         <Label text="Didn’t receive code?" />
+         <Button styleClass="button4" stylesheets="@../css/style.css" text=" Resend again" />
+      </children>
+   </HBox>
+   <Button alignment="BOTTOM_CENTER" layoutX="99.0" layoutY="612.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+      <graphic>
+         <Rectangle accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" height="3.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      </graphic>
+   </Button>
+   <HBox layoutX="44.0" layoutY="450.0" prefHeight="23.0" prefWidth="275.0">
+      <children>
+         <Label fx:id="lblErrors" alignment="CENTER" prefHeight="23.0" prefWidth="293.0" textFill="#ff6354">
+            <font>
+               <Font name="Poppins" size="10.0" />
+            </font>
+         </Label>
+      </children>
+   </HBox>
+
+</AnchorPane>

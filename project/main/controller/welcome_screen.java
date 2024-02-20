@@ -42,4 +42,16 @@ public class welcome_screen {
 
     }
 
+    public void ButtonSignIn(ActionEvent event) throws IOException {
+
+        // Load the FXML file for the new scene
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/sign_in.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        Stage stage = (Stage) timeLabel.getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
 }
