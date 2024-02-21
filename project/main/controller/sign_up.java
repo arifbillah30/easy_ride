@@ -76,10 +76,8 @@ public class sign_up {
         countryChoiceBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             // Check if the selected country is "BD"
             if ("BD".equals(newValue)) {
-                // Update the text of the phone TextField with the country code
                 signup_phone.setText("+880");
             } else {
-                // Clear the phone TextField if another country is selected
                 signup_phone.clear();
             }
         });
@@ -116,7 +114,7 @@ public class sign_up {
 
         // Validate email format
         if (!isValidEmail(email)) {
-            setLblError(Color.TOMATO, "Invalid email format");
+            setLblError(Color.TOMATO, "Please use your University mail.");
             return;
         }
 
@@ -156,7 +154,7 @@ public class sign_up {
 
     // Method to validate email format
     private boolean isValidEmail(String email) {
-        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+        String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+\\.uiu\\.ac\\.bd$";
         Pattern pattern = Pattern.compile(emailRegex);
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
@@ -180,7 +178,7 @@ public class sign_up {
 
 
     @FXML
-    public void sign_in(ActionEvent event) throws IOException {
+    private void sign_in(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/sign_in.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);

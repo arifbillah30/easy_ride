@@ -22,6 +22,8 @@ import java.time.format.DateTimeFormatter;
 
 public class sign_in {
 
+
+
     @FXML
     private TextField userInfo;
 
@@ -49,7 +51,9 @@ public class sign_in {
         // Update time label
         updateTimeLabel();
 
+
     }
+
     private void updateTimeLabel() {
         LocalTime currentTime = LocalTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm a");
@@ -63,8 +67,7 @@ public class sign_in {
     }
 
 
-
-    public void signBtn(ActionEvent event) {
+    public void signInBtn(ActionEvent event) {
         String userInput = userInfo.getText();
         String password = passwordField.getText();
 
@@ -86,11 +89,14 @@ public class sign_in {
             String sql;
             if (userInput.startsWith("0")) {
                 // Treat as ID
-                sql = "SELECT id, password FROM users WHERE id = ?";
+                sql = "SELECT id,email, password FROM users WHERE id = ?";
             } else {
+
                 // Treat as email
-                sql = "SELECT email, password FROM users WHERE email = ?";
+                sql = "SELECT email,id, password FROM users WHERE email = ?";
+
             }
+
             PreparedStatement preparedStatement = con.prepareStatement(sql);
             preparedStatement.setString(1, userInput);
 
@@ -98,6 +104,7 @@ public class sign_in {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
+
                 // Extract the stored password
                 String storedPassword = resultSet.getString("password");
 
@@ -106,7 +113,7 @@ public class sign_in {
 
 
                     SessionController session = new SessionController();
-                    session.setUserId(resultSet.getInt("id"));
+                    session.setUserId(resultSet.getString("id"));
                     dashboard(session);
 
                 } else {
@@ -130,12 +137,13 @@ public class sign_in {
 
 
     public class SessionController {
-        private int userId;
+        private String userId;
 
-        public int getUserId() {
+        public String getUserId() {
             return userId;
         }
-        public void setUserId(int userId) {
+
+        public void setUserId(String userId) {
             this.userId = userId;
         }
         // ... other getters and setters
@@ -143,17 +151,31 @@ public class sign_in {
 
 
     // Method to navigate to the dashboard scene
-   @FXML
-   private void dashboard(SessionController session) throws IOException {
-       FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/dashboard.fxml"));
-       Parent root = loader.load();
-       Scene scene = new Scene(root);
+    @FXML
+    private void dashboard(SessionController session) throws IOException {
+        Stage stage = (Stage) timeLabel.getScene().getWindow();
+        String fxmlPath = "/application/dashboard.fxml";
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
 
-       dashboard controller = loader.getController();
-       controller.setSession(session);
+        dashboard controller = loader.getController();
+        controller.setSession(session);
 
-       Stage stage = (Stage) timeLabel.getScene().getWindow();
-       stage.setScene(scene);
-       stage.show();
-   }
+        switchScene(fxmlPath, stage);
+    }
+
+
+    @FXML
+    private void signUpBtn(ActionEvent event) throws IOException {
+        Stage stage = (Stage) timeLabel.getScene().getWindow();
+        switchScene("/application/sign_up.fxml", stage);
+    }
+
+    private void switchScene(String fxmlPath, Stage stage) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }
