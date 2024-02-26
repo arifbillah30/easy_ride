@@ -1,5 +1,8 @@
 package controller;
 
+import javafx.animation.FadeTransition;
+import javafx.animation.RotateTransition;
+import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
@@ -8,7 +11,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,9 +24,15 @@ public class SplashController implements Initializable {
     @FXML
     private Label lblLoading;
 
+    @FXML
+    private ImageView logoImage;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         startBackgroundTasks();
+        applyFadeTransition();
+        applyRotationTransition();
+
     }
 
     private void startBackgroundTasks() {
@@ -34,6 +46,7 @@ public class SplashController implements Initializable {
                 Thread.sleep(1500);
 
                 updateMessage("Effortless Travel Awaits.");
+                Thread.sleep(1500);
                 loadMainStage();
                 return null;
             }
@@ -58,4 +71,21 @@ public class SplashController implements Initializable {
             }
         });
     }
+
+    private void applyFadeTransition() {
+        FadeTransition fade = new FadeTransition(Duration.seconds(5.0), logoImage);
+        fade.setFromValue(0.0);
+        fade.setToValue(1.0);
+        fade.play();
+    }
+
+
+    private void applyRotationTransition() {
+        RotateTransition rotate = new RotateTransition(Duration.seconds(1.5), logoImage);
+        rotate.setFromAngle(0);
+        rotate.setToAngle(360); // Full rotation
+        rotate.setCycleCount(1); // Rotate once
+        rotate.play();
+    }
+
 }
