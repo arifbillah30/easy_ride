@@ -27,6 +27,6 @@ public class dashboard {
 
     public void setSession(sign_in.SessionController session) {
 
-        System.out.println(session);
+        System.out.println(session.getUserId()+" successfully Login");
     }
 }

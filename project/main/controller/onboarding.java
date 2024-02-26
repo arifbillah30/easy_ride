@@ -32,7 +32,7 @@ public class onboarding {
     public void ButtonClick(ActionEvent event) throws IOException{
 
             // Load the FXML file for the new scene
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/onboarding2.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/onboarding/onboarding2.fxml"));
             Parent root = loader.load();
 
             // Create a new scene

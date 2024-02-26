@@ -17,7 +17,7 @@
    </Label>
    <!-- Status bar -->
    <ImageView fitHeight="86.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../../../ui_images/onboarding_ui/status_bar.png" />
+      <Image url="@../ui_images/onboarding_ui/status_bar.png" />
    </ImageView>
 
    <!-- Time label -->

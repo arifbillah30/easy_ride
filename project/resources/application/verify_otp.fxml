@@ -14,7 +14,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.verify_otp">
    <!-- Status bar -->
    <ImageView fitHeight="86.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../../../ui_images/onboarding_ui/status_bar.png" />
+      <Image url="@../ui_images/onboarding_ui/status_bar.png" />
    </ImageView>
 
    <!-- Time label -->
@@ -52,7 +52,7 @@
          <Button styleClass="button4" stylesheets="@../css/style.css" text=" Resend again" />
       </children>
    </HBox>
-   <Button alignment="BOTTOM_CENTER" layoutX="99.0" layoutY="612.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+   <Button alignment="BOTTOM_CENTER" layoutX="96.0" layoutY="610.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
       <graphic>
          <Rectangle accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" height="3.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
       </graphic>

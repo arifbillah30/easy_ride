@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: f18000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SplashController">
+
+   <ProgressBar layoutX="90.0" layoutY="346.0" prefHeight="15.0" prefWidth="175.0" AnchorPane.bottomAnchor="278.8" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="94.79999999999995" />
+   <ImageView fitHeight="175.0" fitWidth="175.0" layoutX="90.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../ui_images/logo/splash_logo/SplashLogo.png" />
+      </image>
+   </ImageView>
+
+   <Label fx:id="lblLoading" alignment="CENTER" contentDisplay="CENTER" layoutX="105.0" layoutY="386.0" prefHeight="18.0" prefWidth="147.0" styleClass="text" stylesheets="@../../css/style.css" text="loading..." AnchorPane.bottomAnchor="235.60000000000002" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="109.4" />
+
+   <Button alignment="BOTTOM_CENTER" layoutX="96.0" layoutY="610.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+      <graphic>
+         <Rectangle accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" height="3.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+      </graphic>
+   </Button>
+
+</AnchorPane>

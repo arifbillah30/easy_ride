@@ -32,7 +32,7 @@ public class template {
     public void Home(ActionEvent event) throws IOException {
 
         // Load the FXML file for the new scene
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/onboarding.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("application/onboarding/onboarding.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) timeLabel.getScene().getWindow();

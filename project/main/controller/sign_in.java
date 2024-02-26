@@ -153,14 +153,16 @@ public class sign_in {
     // Method to navigate to the dashboard scene
     @FXML
     private void dashboard(SessionController session) throws IOException {
-        Stage stage = (Stage) timeLabel.getScene().getWindow();
-        String fxmlPath = "/application/dashboard.fxml";
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/dashboard.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
 
         dashboard controller = loader.getController();
         controller.setSession(session);
 
-        switchScene(fxmlPath, stage);
+        Stage stage = (Stage) timeLabel.getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
 

@@ -16,10 +16,10 @@
       </font>
    </Label>
    <ImageView fitHeight="238.0" fitWidth="309.0" layoutX="27.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../../../ui_images/onboarding_ui/image_4.png" />
+      <Image url="@../ui_images/onboarding_ui/image_4.png" />
    </ImageView>
    <ImageView fitHeight="86.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@../../../ui_images/onboarding_ui/status_bar.png" />
+      <Image url="@../ui_images/onboarding_ui/status_bar.png" />
    </ImageView>
    <Label fx:id="timeLabel" layoutX="8.0" prefHeight="46.0" prefWidth="68.0" style="-fx-font-weight: bold; -fx-alignment: center; -fx-background-color: white;" text="Time" />
 
@@ -29,7 +29,7 @@
       </font>
    </Label>
    <Line endX="259.0000305175781" layoutX="101.0" layoutY="49.0" startX="-100.0" />
-   <Button alignment="BOTTOM_CENTER" layoutX="89.0" layoutY="602.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
+   <Button alignment="BOTTOM_CENTER" layoutX="96.0" layoutY="610.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
       <graphic>
          <Rectangle accessibleRole="BUTTON" arcHeight="5.0" arcWidth="5.0" height="3.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
       </graphic>
