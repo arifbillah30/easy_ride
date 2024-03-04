@@ -2,7 +2,6 @@ package controller;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.RotateTransition;
-import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
@@ -36,7 +35,7 @@ public class SplashController implements Initializable {
     }
 
     private void startBackgroundTasks() {
-        Task<Void> task = new Task<Void>() {
+        Task<Void> task = new Task<>() {
             @Override
             protected Void call() throws Exception {
                 updateMessage("Your Journey Starts Here.");
@@ -81,7 +80,7 @@ public class SplashController implements Initializable {
 
 
     private void applyRotationTransition() {
-        RotateTransition rotate = new RotateTransition(Duration.seconds(1.5), logoImage);
+        RotateTransition rotate = new RotateTransition(Duration.seconds(2), logoImage);
         rotate.setFromAngle(0);
         rotate.setToAngle(360); // Full rotation
         rotate.setCycleCount(1); // Rotate once

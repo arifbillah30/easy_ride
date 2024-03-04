@@ -10,14 +10,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: f18000;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SplashController">
 
-   <ProgressBar layoutX="90.0" layoutY="346.0" prefHeight="15.0" prefWidth="175.0" AnchorPane.bottomAnchor="278.8" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="94.79999999999995" />
-   <ImageView fx:id="logoImage" fitHeight="175.0" fitWidth="175.0" layoutX="90.0" layoutY="171.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+   <ProgressBar layoutX="93.0" layoutY="369.0" prefHeight="10.0" prefWidth="175.0" AnchorPane.bottomAnchor="260.6" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="92.60000000000002" />
+   <ImageView fx:id="logoImage" fitHeight="166.0" fitWidth="166.0" layoutX="96.0" layoutY="169.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../../ui_images/logo/favicon.png" />
       </image>
    </ImageView>
 
-   <Label fx:id="lblLoading" alignment="CENTER" contentDisplay="CENTER" layoutX="105.0" layoutY="386.0" prefHeight="18.0" prefWidth="147.0" styleClass="text" stylesheets="@../../css/style.css" text="loading..." AnchorPane.bottomAnchor="235.60000000000002" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="109.4" />
+   <Label fx:id="lblLoading" alignment="CENTER" contentDisplay="CENTER" layoutX="107.0" layoutY="397.0" prefHeight="18.0" prefWidth="147.0" styleClass="text" stylesheets="@../../css/style.css" text="loading..." AnchorPane.bottomAnchor="224.60000000000002" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="107.4" />
 
    <Button alignment="BOTTOM_CENTER" layoutX="96.0" layoutY="610.0" mnemonicParsing="false" style="-fx-background-color: transparent;">
       <graphic>
