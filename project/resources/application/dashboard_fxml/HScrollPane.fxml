@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+    <HBox alignment="CENTER" spacing="10.0">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f18000" height="85.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f18000" height="85.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f18000" height="85.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+    </HBox>

@@ -1,0 +1,10 @@
+Fontawesome5
+Version 12.3.1
+Table of Contents
+1. Brands (FontAwesomeBrands)
+2. Regular (FontAwesomeRegular)
+3. Solid (FontAwesomeSolid)
+Use the indicated enum type for each set.
+
+
+https://kordamp.org/ikonli/cheat-sheet-fontawesome5.html

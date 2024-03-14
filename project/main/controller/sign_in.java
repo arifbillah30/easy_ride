@@ -1,5 +1,6 @@
 package controller;
 
+import controller.DashboardController.dashboard;
 import includes.dbconnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -67,7 +68,7 @@ public class sign_in {
     }
 
 
-    public void signInBtn(ActionEvent event) {
+    public void signInBtn() {
         String userInput = userInfo.getText();
         String password = passwordField.getText();
 
@@ -153,7 +154,7 @@ public class sign_in {
     // Method to navigate to the dashboard scene
     @FXML
     private void dashboard(SessionController session) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/dashboard.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/dashboard_fxml/dashboard.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 

@@ -1,6 +1,5 @@
 package application;
 
-import com.sun.javafx.application.LauncherImpl;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,7 +13,7 @@ public class home extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/splash_screen/splash.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/dashboard_fxml/dashboard.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 360, 640);
         stage.setTitle("Easy Ride - Book your E-Rickshaw ");

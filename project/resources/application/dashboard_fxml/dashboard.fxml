@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" style="-fx-background-color: white;" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController.dashboard">
+
+   <!-- Status bar -->
+   <ImageView fitHeight="86.0" fitWidth="391.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../ui_images/onboarding_ui/status_bar.png" />
+   </ImageView>
+
+   <!-- Time label -->
+   <Label fx:id="timeLabel" layoutX="8.0" prefHeight="46.0" prefWidth="68.0" style="-fx-font-weight: bold; -fx-alignment: center; -fx-background-color: white;" text="Time" />
+
+   <!-- Horizontal separator line -->
+   <Line endX="259.0000305175781" layoutX="101.0" layoutY="49.0" startX="-100.0" />
+
+   <ScrollPane fx:id="verticalScrollPane" hbarPolicy="NEVER" layoutY="53.0" pannable="true" prefHeight="509.0" prefWidth="360.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
+      <content>
+         <VBox fx:id="verticalScrollBox" alignment="CENTER" prefHeight="678.0" prefWidth="359.0" spacing="10.0" style="-fx-background-color: transparent;" />
+      </content>
+   </ScrollPane>
+
+
+
+   <Label fx:id="SetName" alignment="CENTER" layoutX="65.0" layoutY="72.0" prefHeight="18.0" prefWidth="229.0">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Button alignment="CENTER" layoutX="27.0" layoutY="72.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="38.0" style="-fx-background-color: transparent;">
+      <graphic>
+         <FontIcon iconLiteral="fas-align-left" iconSize="20" wrappingWidth="22.5" />
+      </graphic>
+   </Button>
+   <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="298.0" layoutY="72.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="23.0" style="-fx-background-color: transparent;">
+      <graphic>
+         <FontIcon iconLiteral="fas-user-circle" iconSize="20" wrappingWidth="22.5" />
+      </graphic>
+   </Button>
+   <AnchorPane layoutX="25.0" layoutY="122.0" prefHeight="52.0" prefWidth="253.0">
+      <children>
+         <FontIcon iconColor="#917afd" iconLiteral="fas-map-marker-alt" iconSize="25" layoutX="11.0" layoutY="38.0" text="" wrappingWidth="22.5" />
+         <Label layoutX="44.0" layoutY="6.0" prefHeight="46.0" prefWidth="206.0" style="-fx-font-family: 'Poppins', sans-serif; -fx-font-style: normal;" text="United Internation University" textAlignment="CENTER" textFill="#414141" />
+         <ChoiceBox fx:id="signup_gender11" layoutX="208.0" layoutY="9.0" prefHeight="40.0" prefWidth="30.0" style="-fx-background-color: transparent;" />
+      </children>
+   </AnchorPane>
+   <AnchorPane layoutX="41.0" layoutY="175.0" prefHeight="115.0" prefWidth="279.0">
+      <children>
+         <ImageView fitHeight="111.0" fitWidth="279.0" layoutY="4.0" pickOnBounds="true">
+            <image>
+               <Image url="@../../ui_images/onboarding_ui/map.jpg" />
+            </image>
+         </ImageView>
+      </children>
+   </AnchorPane>
+
+
+   <AnchorPane layoutX="27.0" layoutY="286.0" prefHeight="52.0" prefWidth="253.0">
+      <children>
+         <FontIcon iconColor="#e30000" iconLiteral="fas-map-marker-alt" iconSize="25" layoutX="11.0" layoutY="38.0" text="" wrappingWidth="22.5" />
+         <Label layoutX="44.0" layoutY="6.0" prefHeight="46.0" prefWidth="206.0" style="-fx-font-family: 'Poppins', sans-serif; -fx-font-style: normal;" text="Natun Bazar" textAlignment="CENTER" textFill="#414141" />
+         <ChoiceBox fx:id="signup_gender111" layoutX="208.0" layoutY="9.0" prefHeight="40.0" prefWidth="30.0" style="-fx-background-color: transparent;" />
+      </children>
+   </AnchorPane>
+   <HBox alignment="CENTER" layoutX="46.0" layoutY="378.0" prefHeight="68.0" prefWidth="269.0" spacing="40.0">
+      <children>
+         <VBox alignment="CENTER">
+            <children>
+               <StackPane prefHeight="52.0" prefWidth="36.0">
+                  <children>
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f18000" height="50.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+                     <FontIcon iconLiteral="fas-user-clock" iconSize="30" />
+                  </children>
+               </StackPane>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Waitlist" />
+            </children>
+         </VBox>
+         <VBox alignment="CENTER">
+            <children>
+               <StackPane prefHeight="52.0" prefWidth="36.0">
+                  <children>
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f18000" height="50.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+                     <FontIcon iconLiteral="fas-coins" iconSize="30" />
+                  </children>
+               </StackPane>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gift Coin" />
+            </children>
+         </VBox>
+         <VBox alignment="CENTER">
+            <children>
+               <StackPane prefHeight="52.0" prefWidth="36.0">
+                  <children>
+                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f18000" height="50.0" stroke="BLACK" strokeType="INSIDE" width="60.0" />
+                     <FontIcon iconLiteral="fas-wallet" iconSize="30" />
+                  </children>
+               </StackPane>
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wallet" />
+            </children>
+         </VBox>
+      </children>
+   </HBox>
+   <Label alignment="CENTER" layoutX="27.0" layoutY="109.0" prefHeight="26.0" prefWidth="128.0" style="-fx-font-family: 'Poppins', sans-serif; -fx-font-style: normal;" text="Your current locations" textAlignment="CENTER" textFill="#414141" wrapText="true">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Label>
+   <StackPane alignment="CENTER_LEFT" layoutX="19.0" layoutY="339.0" prefHeight="30.0" prefWidth="322.0">
+      <children>
+         <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#45cc70" height="27.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="322.0" />
+         <FontIcon iconLiteral="fas-money-check">
+            <StackPane.margin>
+               <Insets left="5.0" right="5.0" />
+            </StackPane.margin>
+         </FontIcon>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pay Later">
+            <StackPane.margin>
+               <Insets left="30.0" />
+            </StackPane.margin>
+         </Text>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ride now, pay later &gt;">
+            <StackPane.margin>
+               <Insets left="200.0" />
+            </StackPane.margin>
+         </Text>
+      </children>
+   </StackPane>
+
+
+   <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" layoutX="20.0" layoutY="463.0" pannable="true" prefHeight="87.0" prefWidth="322.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
+      <fx:include source="HScrollPane.fxml" />
+
+   </ScrollPane>
+
+   <AnchorPane layoutY="565.0" prefWidth="360.0">
+      <children>
+
+         <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#f18800" height="50.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="360.0" />
+         <Rectangle fill="#f18800" height="50.0" layoutY="25.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="360.0" />
+      </children>
+   </AnchorPane>
+   <!-- Icon-text pairs -->
+   <HBox alignment="CENTER" layoutX="11.0" layoutY="576.0" prefHeight="58.0" spacing="45.0" AnchorPane.bottomAnchor="6.399999999999977" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.399999999999977" AnchorPane.topAnchor="576.0">
+      <VBox alignment="CENTER">
+         <FontIcon iconColor="WHITE" iconLiteral="fas-home" iconSize="20" />
+         <Text fill="WHITE" style="-fx-font-size: 14px;" text="Home" />
+      </VBox>
+      <VBox alignment="CENTER">
+         <FontIcon iconColor="WHITE" iconLiteral="fas-history" iconSize="20" />
+         <Text fill="WHITE" style="-fx-font-size: 14px;" text="History" />
+      </VBox>
+      <VBox alignment="CENTER">
+         <FontIcon iconColor="WHITE" iconLiteral="fas-heart" iconSize="20" />
+         <Text fill="WHITE" style="-fx-font-size: 14px;" text="Favourite" />
+      </VBox>
+      <VBox alignment="CENTER">
+         <FontIcon iconColor="WHITE" iconLiteral="fas-user" iconSize="20" />
+         <Text fill="WHITE" style="-fx-font-size: 14px;" text="Account" />
+      </VBox>
+   </HBox>
+
+
+
+</AnchorPane>
