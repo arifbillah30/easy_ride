@@ -1,10 +1,21 @@
 package controller.DashboardController;
 
 import controller.sign_in;
+import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import includes.dbconnect;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import javafx.util.Duration;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,12 +35,26 @@ public class dashboard {
     @FXML
     private Label SetName;
 
-    private double lastX = 0;
-    private double currentX = 0;
+    @FXML
+    private Label DesAddressLabel;
+
+
+    @FXML
+    private ChoiceBox<String> SrcAddressSelect;
+
+    @FXML
+    private ChoiceBox<String> DesAddressSelect;
+
+    @FXML
+    private BorderPane borderPane;
+
+    private boolean sliderIsVisible = true;
+
+
+
 
     public void initialize() {
 
-        // Get the current time
         LocalTime currentTime = LocalTime.now();
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm a");
@@ -38,6 +63,14 @@ public class dashboard {
         timeLabel.setText(formattedTime);
 
         con = dbconnect.conDB();
+
+        SrcAddressSelect.getItems().addAll("United International University", "Natun Bazar");
+        DesAddressSelect.getItems().addAll("United International University", "Natun Bazar","Sayeed Nagar" );
+        SrcAddressSelect.getSelectionModel().select(0);
+
+        DesAddressSelect.valueProperty().addListener((obs, oldVal, newVal) -> clearLabelIfSelected(DesAddressLabel));
+
+        borderPane.setTranslateX(-borderPane.getPrefWidth());
 
     }
 
@@ -69,4 +102,64 @@ public class dashboard {
         }
     }
 
+    @FXML
+    private void handleDesAddressSelect() {
+
+        String pickup = DesAddressSelect.getValue();
+
+        String drop_off = SrcAddressSelect.getValue();
+
+
+
+        if (drop_off != null && pickup != null && !pickup.equals(drop_off)) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/application/dashboard_fxml/create_ride.fxml"));
+                Parent root = loader.load();
+
+                    create_ride controller = loader.getController();
+
+                    controller.setAddresses(SrcAddressSelect.getValue(), pickup);
+
+                    Stage stage = (Stage) DesAddressSelect.getScene().getWindow(); // Get current stage
+                    Scene scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
+
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void clearLabelIfSelected(Label label) {
+        if (label.getText() != null && !label.getText().isEmpty()) {
+            label.setText("");
+        }
+    }
+
+
+    @FXML
+    private void showSlider(ActionEvent event) {
+        toggleSlider();
+    }
+
+    private void toggleSlider() {
+        TranslateTransition transition = new TranslateTransition(Duration.millis(300), borderPane);
+
+        if (sliderIsVisible) {
+            transition.setToX(200); // Slide in from the left
+        } else {
+            transition.setToX(borderPane.getParent(). prefWidth(400) - borderPane.getPrefWidth()); // Slide out to the right
+        }
+
+        transition.play();
+        sliderIsVisible = !sliderIsVisible;
+    }
+
+
 }
+
+
+

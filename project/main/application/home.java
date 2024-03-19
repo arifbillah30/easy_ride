@@ -13,7 +13,7 @@ public class home extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/dashboard_fxml/dashboard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/application/splash_screen/splash.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 360, 640);
         stage.setTitle("Easy Ride - Book your E-Rickshaw ");
